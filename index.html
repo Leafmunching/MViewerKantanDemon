@@ -14,13 +14,15 @@
             width: 100vw; /* Full viewport width */
             height: 100vh; /* Full viewport height */
             display: flex;
-            justify-content: center; /* Center the viewer */
-            align-items: center; /* Center the viewer */
+            justify-content: center; /* Center the viewer horizontally */
+            align-items: center; /* Center the viewer vertically */
             overflow: hidden; /* Prevents scrolling */
+            position: relative; /* Allows for absolute positioning of the viewer */
         }
         #viewer {
             width: 100%;
             height: 100%;
+            position: absolute; /* Allows the viewer to scale with the container */
         }
     </style>
 </head>
