@@ -4,33 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marmoset Viewer</title>
-    <script src="https://www.marmoset.co/toolbag/viewer.min.js"></script> <!-- Ensure the correct Marmoset viewer script is included -->
+    <script src="https://www.marmoset.co/toolbag/viewer.min.js"></script>
     <style>
-        body {
+        body, html {
             margin: 0;
-            overflow: hidden; /* Removes scrollbars from the body */
-        }
-        #viewer-container {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
-            display: flex;
-            justify-content: center; /* Center the viewer */
-            align-items: center; /* Center the viewer */
-            overflow: hidden; /* Prevents scrolling */
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Ensures no scrollbars on the page */
         }
         #viewer {
-            width: 100%;
-            height: 100%;
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            display: block; /* Ensures block-level display to fill container */
         }
     </style>
 </head>
 <body>
-    <div id="viewer-container">
-        <div id="viewer"></div>
-    </div>
+    <div id="viewer"></div>
     <script>
         var viewer = new Marmoset.Viewer('viewer');
-        viewer.load('KantanWarrior.mview');
+        viewer.load('KantanWarrior.mview'); // Replace 'your-file.mview' with your actual file name
     </script>
 </body>
 </html>
+
