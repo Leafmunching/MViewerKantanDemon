@@ -9,13 +9,16 @@
         body, html {
             margin: 0;
             padding: 0;
+            width: 100%;
             height: 100%;
-            overflow: hidden; /* Ensures no scrollbars on the page */
+            overflow: hidden; /* Removes scrollbars */
         }
         #viewer {
-            width: 100vw; /* Full viewport width */
-            height: 100vh; /* Full viewport height */
-            display: block; /* Ensures block-level display to fill container */
+            position: absolute; /* Ensures it stretches to fill the container */
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
@@ -23,8 +26,7 @@
     <div id="viewer"></div>
     <script>
         var viewer = new Marmoset.Viewer('viewer');
-        viewer.load('KantanWarrior.mview'); // Replace 'your-file.mview' with your actual file name
+        viewer.load('KantanWarrior.mview'); // Replace with your actual file
     </script>
 </body>
 </html>
-
