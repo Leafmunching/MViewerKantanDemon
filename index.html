@@ -1,32 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<meta name="viewport" content="user-scalable=0"/>
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Marmoset Viewer</title>
-    <script src="https://www.marmoset.co/toolbag/viewer.min.js"></script>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            width: 100%;
-            height: 100%;
-            overflow: hidden; /* Removes scrollbars */
-        }
-        #viewer {
-            position: absolute; /* Ensures it stretches to fill the container */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
-    </style>
+    <title>Kantan</title>
+    <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
 </head>
 <body>
-    <div id="viewer"></div>
     <script>
-        var viewer = new Marmoset.Viewer('viewer');
-        viewer.load('KantanWarrior.mview'); // Replace with your actual file
+        marmoset.embed( 'KantanWarrior.mview', { width: 600, height: 600, autoStart: true, fullFrame: false, pagePreset: false } );
     </script>
 </body>
 </html>
