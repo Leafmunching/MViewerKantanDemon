@@ -1,13 +1,38 @@
 <!DOCTYPE html>
-<meta name="viewport" content="user-scalable=0"/>
-<html>
+<html lang="en">
 <head>
-    <title>KantanWarrior</title>
-    <script src="https://viewer.marmoset.co/main/marmoset.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marmoset Viewer</title>
+    <script src="https://www.marmoset.co/toolbag/viewer.min.js"></script> <!-- Ensure the correct Marmoset viewer script is included -->
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden; /* Removes scrollbars from the body */
+        }
+        #viewer-container {
+            width: 100vw; /* Full viewport width */
+            height: 100vh; /* Full viewport height */
+            display: flex;
+            justify-content: center; /* Center the viewer horizontally */
+            align-items: center; /* Center the viewer vertically */
+            overflow: hidden; /* Prevents scrolling */
+            position: relative; /* Allows for absolute positioning of the viewer */
+        }
+        #viewer {
+            width: 100%;
+            height: 100%;
+            position: absolute; /* Allows the viewer to scale with the container */
+        }
+    </style>
 </head>
 <body>
+    <div id="viewer-container">
+        <div id="viewer"></div>
+    </div>
     <script>
-        marmoset.embed( 'KantanWarrior.mview', { width: 600, height: 600, autoStart: true, fullFrame: false, pagePreset: false } );
+        var viewer = new Marmoset.Viewer('viewer');
+        viewer.load('KantanWarrior.mview'); // Replace 'your-file.mview' with your actual file name
     </script>
 </body>
 </html>
